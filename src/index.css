@@ -1,0 +1,17 @@
+/* ========== fonts ========== */
+@font-face {
+  font-family: "Glacial";
+  src: url("../public/fonts/GlacialIndifference-Regular.otf");
+}
+
+@font-face {
+  font-family: "Glacial";
+  font-weight: bold;
+  src: url("../public/fonts/GlacialIndifference-Bold.otf");
+}
+
+/* ========== reset ========== */
+* {
+  margin: 0;
+  font-family: "Glacial";
+}
