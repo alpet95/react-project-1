@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  background-color: lightgray;
+  /* background-color: lightgray; */
 `;
 
 // __________ left side __________
@@ -19,19 +19,19 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: lightblue;
+  /* background-color: lightblue; */
 `;
 
 const Logo = styled.h1`
   font-weight: bold;
   text-decoration: underline crimson;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
 `;
 
 const Menu = styled.ul`
   display: flex;
   list-style: none;
-  background-color: lightseagreen;
+  /* background-color: lightseagreen; */
 `;
 
 const MenuItem = styled.li`
@@ -39,15 +39,15 @@ const MenuItem = styled.li`
   font-size: 20px;
   font-weight: bold;
   color: gray;
-  background-color: lightyellow;
+  /* background-color: lightyellow; */
 `;
 
 // __________ right side __________
 const Button = styled.button`
   padding: 10px 15px;
-  font-weight: bold;
   border: 2px solid white;
   border-radius: 10px;
+  font-weight: bold;
   color: white;
   background-color: crimson;
   cursor: pointer;
