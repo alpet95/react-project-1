@@ -74,6 +74,7 @@ const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: lightgreen; */
 `;
 
 const Image = styled.img`
