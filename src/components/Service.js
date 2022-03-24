@@ -22,8 +22,11 @@ const Left = styled.div`
 `;
 
 const Image = styled.img`
-  height: 100%;
-  margin-left: 10px;
+  position: absolute;
+  left: 10rem;
+  bottom: 0;
+  height: 85%;
+  /* margin-left: 10px; */
   display: ${(props) => props.hide && "none"};
 `;
 
@@ -34,6 +37,7 @@ const Right = styled.div`
 
 const Wrapper = styled.div`
   padding: 50px;
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
 `;
@@ -55,7 +59,8 @@ const CardContainer = styled.div`
 const Button = styled.button`
   width: 180px;
   padding: 15px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  margin: 50px auto 0;
   display: flex;
   align-items: center;
   border: none;
