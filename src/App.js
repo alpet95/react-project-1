@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Feature from "./components/Feature";
+import Service from "./components/Service";
 import styled, { css } from "styled-components";
 
 const Container = styled.div`
@@ -9,6 +10,7 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
+// __________ css clip __________
 const Shape = css`
   position: absolute;
   top: 0;
@@ -30,6 +32,12 @@ const FeatureShape = styled.div`
   background-color: pink;
 `;
 
+const ServiceShape = styled.div`
+  ${Shape}
+  clip-path: polygon(0% 0%, 33% 0%, 33% 100%, 0% 100%);
+  background-color: #f88497;
+`;
+
 function App() {
   return (
     <>
@@ -41,6 +49,10 @@ function App() {
       <Container>
         <Feature />
         <FeatureShape />
+      </Container>
+      <Container>
+        <Service />
+        <ServiceShape />
       </Container>
     </>
   );

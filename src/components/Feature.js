@@ -5,7 +5,7 @@ import PhoneApp from "../img/phone-app.png";
 // ========== css: styled components ==========
 const Container = styled.div`
   display: flex;
-  height: 100vh; // alpet
+  /* height: 100vh; // alpet */
 `;
 
 // __________ left side __________
