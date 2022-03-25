@@ -3,8 +3,11 @@ import Intro from "./components/Intro";
 import Feature from "./components/Feature";
 import Service from "./components/Service";
 import Price from "./components/Price";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import styled, { css } from "styled-components";
 
+// ========== css: styled components ==========
 const Container = styled.div`
   position: relative;
   height: 100vh;
@@ -45,6 +48,7 @@ const PriceShape = styled.div`
   background-color: crimson;
 `;
 
+// ========== component: app ==========
 function App() {
   return (
     <>
@@ -64,6 +68,10 @@ function App() {
       <Container>
         <Price />
         <PriceShape />
+      </Container>
+      <Container>
+        <Contact />
+        <Footer />
       </Container>
     </>
   );
