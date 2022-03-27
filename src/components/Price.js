@@ -1,5 +1,7 @@
 import React from "react";
+// __________ components __________
 import PriceCard from "./PriceCard";
+// __________ styles __________
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -8,7 +10,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;

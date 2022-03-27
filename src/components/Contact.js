@@ -15,14 +15,16 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
 
 const FormContainer = styled.div`
   width: 50%;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -31,7 +33,12 @@ const Title = styled.h1`
   margin-top: 0;
   margin: 50px;
   text-align: center;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1024px) {
+    margin: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
     margin: 20px;
   }
 `;
@@ -41,7 +48,12 @@ const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1024px) {
+    height: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -52,7 +64,12 @@ const LeftForm = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-right: 20px;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1024px) {
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
     height: 50%;
     margin-right: 0;
   }
@@ -63,7 +80,8 @@ const RightForm = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     height: 50%;
   }
 `;
@@ -71,7 +89,13 @@ const RightForm = styled.div`
 const Input = styled.input`
   width: 200px;
   padding: 20px;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1024px) {
+    width: 180px;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
     padding: 5px;
   }
 `;
@@ -80,7 +104,14 @@ const TextArea = styled.textarea`
   width: 200px;
   height: 60%;
   padding: 20px;
-  @media screen and (max-width: 480px) {
+  resize: none;
+
+  @media screen and (max-width: 1024px) {
+    width: 140px;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
     padding: 5px;
     margin-top: 20px;
   }
@@ -95,7 +126,13 @@ const Button = styled.button`
   color: white;
   background-color: darkblue;
   cursor: pointer;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1024px) {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 768px) {
     padding: 5px;
     font-size: 14px;
   }
@@ -106,7 +143,13 @@ const AddressContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
     width: 100%;
     margin-top: 20px;
   }

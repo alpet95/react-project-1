@@ -1,5 +1,7 @@
 import React from "react";
+// __________ assets __________
 import People from "../img/people.png";
+// __________ styles __________
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -7,7 +9,8 @@ const Container = styled.div`
   height: calc(100vh - 50px);
   padding: 20px;
   display: flex;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -19,8 +22,8 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: lightcyan; */
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     width: 100%;
     height: 100%;
   }
@@ -29,10 +32,21 @@ const Left = styled.div`
 const Title = styled.h1`
   width: 60%;
   font-size: 60px;
-  /* background-color: lightpink; */
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     width: 100%;
+    max-width: 420px;
     font-size: 50px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 280px;
+  }
+
+  @media screen and (max-width: 320px) {
+    min-width: 320px;
+    font-size: 40px;
   }
 `;
 
@@ -40,9 +54,20 @@ const Desc = styled.p`
   width: 60%;
   margin-top: 20px;
   font-size: 20px;
-  /* background-color: lightsteelblue; */
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     width: 100%;
+    max-width: 447px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 280px;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 320px) {
+    min-width: 280px;
   }
 `;
 
@@ -52,41 +77,65 @@ const Info = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: lightseagreen; */
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 768px) {
     width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 480px) {
     flex-direction: column;
   }
 `;
 
 const Button = styled.button`
-  padding: 15px;
+  padding: 20px;
   border: none;
   border-radius: 10px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: white;
-  background-color: darkblue;
+  color: #fff;
+  background-color: #2274a5;
   cursor: pointer;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
   @media screen and (max-width: 480px) {
     margin-bottom: 20px;
+    font-size: 11px;
   }
 `;
 
 const Contact = styled.div`
   display: flex;
   flex-direction: column;
-  /* background-color: lightgoldenrodyellow; */
+
+  @media screen and (max-width: 320px) {
+    min-width: 192px;
+  }
 `;
 
 const Phone = styled.span`
-  color: #f0667d;
   font-weight: bold;
+  color: #f0667d;
 `;
 
 const ContactText = styled.span`
   margin-top: 5px;
-  color: gray;
+  color: #555;
 `;
 
 // __________ right side __________
@@ -95,7 +144,12 @@ const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: lightgreen; */
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   @media screen and (max-width: 480px) {
     display: none;
   }
@@ -103,7 +157,11 @@ const Right = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 360px;
+  }
 `;
 
 // ========== component ==========
@@ -112,17 +170,17 @@ const Intro = () => {
     <Container>
       {/* ========== left side ========== */}
       <Left>
-        <Title>Adventures in creative age</Title>
+        <Title>Cras At Mi Arcu</Title>
         <Desc>
-          We believe that designing products and services in close partnership
-          with our clients is the only way to have a real impact on their
-          business.
+          Curabitur auctor dolor sed felis pulvinar, ac suscipit leo fringilla.
+          Proin sit amet odio suscipit, dictum sem et, dignissim purus. Quisque
+          sit amet vulputate nibh.
         </Desc>
         <Info>
-          <Button>START A PROJECT</Button>
+          <Button>JOIN US</Button>
           <Contact>
-            <Phone>Call Us (012) 345 - 6789</Phone>
-            <ContactText>For any question or concern</ContactText>
+            <Phone>Pharetra (045) 335 - 4861</Phone>
+            <ContactText>Aenean quis metus et metus</ContactText>
           </Contact>
         </Info>
       </Left>

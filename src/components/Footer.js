@@ -68,7 +68,7 @@ const Footer = () => {
             <ListItem key={item.id}>{item.text}</ListItem>
           ))}
         </List>
-        <Copyright>Lama Dev Ⓒ</Copyright>
+        <Copyright>Alpet ©</Copyright>
       </Wrapper>
     </Container>
   );

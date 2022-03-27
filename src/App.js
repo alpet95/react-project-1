@@ -1,3 +1,5 @@
+import React, { Fragment } from "react";
+// __________ components __________
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Feature from "./components/Feature";
@@ -5,6 +7,7 @@ import Service from "./components/Service";
 import Price from "./components/Price";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+// __________ styles __________
 import styled, { css } from "styled-components";
 
 // ========== css: styled components ==========
@@ -27,19 +30,19 @@ const Shape = css`
 const IntroShape = styled.div`
   ${Shape}
   clip-path: polygon(100% 0%, 60% 0%, 45% 100%, 100% 100%);
-  background-color: crimson;
+  background-color: #ffd556;
 `;
 
 const FeatureShape = styled.div`
   ${Shape}
-  clip-path: polygon(0% 0%, 0% 100%, 30% 100%, 45% 0%);
-  background-color: pink;
+  clip-path: polygon(0% 0%, 0% 100%, 33% 100%, 45% 0%);
+  background-color: #8fe9c8;
 `;
 
 const ServiceShape = styled.div`
   ${Shape}
   clip-path: polygon(0% 0%, 33% 0%, 33% 100%, 0% 100%);
-  background-color: #f88497;
+  background-color: #fca17d;
 `;
 
 const PriceShape = styled.div`
@@ -50,9 +53,10 @@ const PriceShape = styled.div`
 
 // ========== component: app ==========
 function App() {
-  const smallScreen = window.screen.width <= 480 ? true : false;
+  const mobileScreen = window.screen.width <= 480 ? true : false;
+
   return (
-    <>
+    <Fragment>
       <Container>
         <Navbar />
         <Intro />
@@ -64,7 +68,7 @@ function App() {
       </Container>
       <Container>
         <Service />
-        {!smallScreen && <ServiceShape />}
+        {!mobileScreen && <ServiceShape />}
       </Container>
       <Container>
         <Price />
@@ -74,7 +78,7 @@ function App() {
         <Contact />
         <Footer />
       </Container>
-    </>
+    </Fragment>
   );
 }
 

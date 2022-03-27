@@ -13,7 +13,8 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   height: 100%;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -22,65 +23,115 @@ const Container = styled.div`
 const Left = styled.div`
   position: relative;
   width: 50%;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
 const Image = styled.img`
   position: absolute;
-  left: 10rem;
+  left: 5rem;
   bottom: 0;
-  height: 85%;
-  /* margin-left: 10px; */
+  height: 80%;
   display: ${(props) => props.hide && "none"};
+
+  @media screen and (max-width: 1750px) {
+    left: -5rem;
+  }
+
+  @media screen and (max-width: 1550px) {
+    left: -10rem;
+  }
+
+  @media screen and (max-width: 1350px) {
+    left: -18rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    left: -18rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    left: -20rem;
+    height: 70%;
+  }
 `;
 
 // __________ right side __________
 const Right = styled.div`
   width: 50%;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     width: 100%;
+    height: 100%;
   }
 `;
 
 const Wrapper = styled.div`
+  height: 100%;
   padding: 50px;
-  margin-top: 8rem;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 480px) {
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
     padding: 20px;
   }
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  @media screen and (max-width: 320px) {
+    min-width: 280px;
+  }
+`;
 
 const Desc = styled.p`
   margin-top: 20px;
   font-size: 20px;
   color: #555;
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 320px) {
+    min-width: 280px;
+  }
 `;
 
 const CardContainer = styled.div`
   margin-top: 50px;
   display: flex;
-  justify-content: space-around; // alpet
+  justify-content: space-around;
+  align-items: baseline;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Button = styled.button`
   width: 180px;
   padding: 15px;
-  /* margin-top: 50px; */
   margin: 50px auto 0;
   display: flex;
   align-items: center;
   border: none;
   border-radius: 10px;
   font-size: 20px;
-  background-color: darkblue;
   color: white;
+  background-color: #2274a5;
   cursor: pointer;
+
+  @media screen and (max-width: 480px) {
+    width: 150px;
+    margin-top: 20px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
 `;
 
 const Icon = styled.img`

@@ -9,7 +9,12 @@ const AddressItemContainer = styled.div`
   margin-bottom: 50px;
   display: flex;
   align-items: center;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
     margin-bottom: 20px;
   }
 `;
@@ -17,7 +22,8 @@ const AddressItemContainer = styled.div`
 const Icon = styled.img`
   width: 20px;
   margin-right: 20px;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     width: 15px;
   }
 `;
@@ -25,7 +31,12 @@ const Icon = styled.img`
 const Text = styled.span`
   font-size: 20px;
   margin-right: 15px;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 768px) {
     font-size: 14px;
   }
 `;

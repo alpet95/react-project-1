@@ -1,4 +1,5 @@
 import React from "react";
+// __________ styles __________
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -10,7 +11,6 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  /* background-color: lightgray; */
 `;
 
 // __________ left side __________
@@ -19,20 +19,18 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: lightblue; */
 `;
 
 const Logo = styled.h1`
   font-weight: bold;
-  text-decoration: underline crimson;
-  /* background-color: lightcoral; */
+  text-decoration: underline #ffd556;
 `;
 
 const Menu = styled.ul`
   display: flex;
   list-style: none;
-  /* background-color: lightseagreen; */
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 580px) {
     display: none;
   }
 `;
@@ -42,7 +40,11 @@ const MenuItem = styled.li`
   font-size: 20px;
   font-weight: bold;
   color: gray;
-  /* background-color: lightyellow; */
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    margin-right: 15px;
+  }
 `;
 
 // __________ right side __________
@@ -63,18 +65,18 @@ const Navbar = () => {
       <Wrapper>
         {/* ========== left side ========== */}
         <Left>
-          <Logo>Agency</Logo>
+          <Logo>Morbi</Logo>
           <Menu>
-            <MenuItem>Home</MenuItem>
-            <MenuItem>Features</MenuItem>
-            <MenuItem>Services</MenuItem>
-            <MenuItem>Pricing</MenuItem>
-            <MenuItem>Contact</MenuItem>
+            <MenuItem>Suscipit </MenuItem>
+            <MenuItem>Fringilla</MenuItem>
+            <MenuItem>Proin</MenuItem>
+            <MenuItem>Amet</MenuItem>
+            <MenuItem>Odio</MenuItem>
           </Menu>
         </Left>
 
         {/* ========== right side ========== */}
-        <Button>JOIN NOW</Button>
+        <Button>SIGN UP</Button>
       </Wrapper>
     </Container>
   );
