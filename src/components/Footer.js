@@ -14,6 +14,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 480px) {
+    padding: 0 15px;
+  }
 `;
 
 const List = styled.ul`
@@ -25,9 +28,17 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   margin-right: 20px;
+  @media screen and (max-width: 480px) {
+    margin-right: 10px;
+    font-size: 14px;
+  }
 `;
 
-const Copyright = styled.span``;
+const Copyright = styled.span`
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+`;
 
 // ========== component: footer ==========
 const Footer = () => {

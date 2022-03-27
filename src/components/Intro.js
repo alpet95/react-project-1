@@ -7,6 +7,9 @@ const Container = styled.div`
   height: calc(100vh - 50px);
   padding: 20px;
   display: flex;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 // __________ left side __________
@@ -17,12 +20,20 @@ const Left = styled.div`
   align-items: center;
   justify-content: center;
   /* background-color: lightcyan; */
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Title = styled.h1`
   width: 60%;
   font-size: 60px;
   /* background-color: lightpink; */
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    font-size: 50px;
+  }
 `;
 
 const Desc = styled.p`
@@ -30,6 +41,9 @@ const Desc = styled.p`
   margin-top: 20px;
   font-size: 20px;
   /* background-color: lightsteelblue; */
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const Info = styled.div`
@@ -39,6 +53,10 @@ const Info = styled.div`
   justify-content: space-between;
   align-items: center;
   /* background-color: lightseagreen; */
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 const Button = styled.button`
@@ -50,6 +68,9 @@ const Button = styled.button`
   color: white;
   background-color: darkblue;
   cursor: pointer;
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const Contact = styled.div`
@@ -75,6 +96,9 @@ const Right = styled.div`
   justify-content: center;
   align-items: center;
   /* background-color: lightgreen; */
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`

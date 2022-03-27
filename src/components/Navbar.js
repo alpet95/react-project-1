@@ -32,6 +32,9 @@ const Menu = styled.ul`
   display: flex;
   list-style: none;
   /* background-color: lightseagreen; */
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const MenuItem = styled.li`

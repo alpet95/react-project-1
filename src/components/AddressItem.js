@@ -9,16 +9,25 @@ const AddressItemContainer = styled.div`
   margin-bottom: 50px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const Icon = styled.img`
   width: 20px;
   margin-right: 20px;
+  @media screen and (max-width: 480px) {
+    width: 15px;
+  }
 `;
 
 const Text = styled.span`
   font-size: 20px;
   margin-right: 15px;
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 
 // ========== component: address item ==========

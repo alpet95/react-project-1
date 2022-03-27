@@ -17,12 +17,17 @@ const ModalContainer = styled.div`
   position: fixed;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -40%);
-  background-color: white;
   padding: 1rem;
   border-radius: 14px;
+  display: flex;
+  background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -40%);
   z-index: 30;
+  @media screen and (max-width: 480px) {
+    width: 80%;
+    padding: 0.5rem;
+  }
 `;
 
 // ========== portals ==========

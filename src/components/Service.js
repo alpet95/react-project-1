@@ -13,12 +13,18 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   height: 100%;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 // __________ left side __________
 const Left = styled.div`
   position: relative;
   width: 50%;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
@@ -33,6 +39,9 @@ const Image = styled.img`
 // __________ right side __________
 const Right = styled.div`
   width: 50%;
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -40,6 +49,9 @@ const Wrapper = styled.div`
   margin-top: 8rem;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
 `;
 
 const Title = styled.h1``;
@@ -81,6 +93,10 @@ const Video = styled.video`
   height: 350px;
   margin: 0 auto;
   display: ${(props) => !props.open && "none"};
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 // ========== component: service ==========

@@ -5,12 +5,19 @@ import PhoneApp from "../img/phone-app.png";
 // ========== css: styled components ==========
 const Container = styled.div`
   display: flex;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
   /* height: 100vh; // alpet */
 `;
 
 // __________ left side __________
 const Left = styled.div`
   width: 50%;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
   /* background-color: lightblue; */
 `;
 
@@ -25,10 +32,16 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   /* background-color: lightgray; */
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.span`
   font-size: 70px;
+  @media screen and (max-width: 480px) {
+    font-size: 50px;
+  }
 `;
 
 const SubTitle = styled.span`
