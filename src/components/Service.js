@@ -156,17 +156,17 @@ const Service = () => {
     {
       id: Math.random().toString(),
       icon: SearchIcon,
-      text: "Lorem ipsum odor amet, consectetuer adipiscing elit.",
+      text: "Sit ne tota probo. In has quidam aperiri. Tota detraxit cu est.",
     },
     {
       id: Math.random().toString(),
       icon: SearchIcon,
-      text: "Ac purus in massa egestas mollis varius.",
+      text: "Sit ne tota probo. In has quidam aperiri. Tota detraxit cu est. ",
     },
     {
       id: Math.random().toString(),
       icon: SearchIcon,
-      text: "Mollis tincidunt mattis hendrerit dolor eros enim.",
+      text: "Sit ne tota probo. In has quidam aperiri. Tota detraxit cu est. ",
     },
   ];
 
@@ -206,12 +206,12 @@ const Service = () => {
       </Left>
       <Right>
         <Wrapper>
-          <Title>Simple process to start</Title>
+          <Title>Id quot oblique sed, ludus</Title>
           <Desc>
-            We provide digital experience services to startups and small
-            businesses to looking for a partner of their digital media, design &
-            development, lead generation and communications requirents. We work
-            with you, not for you. Although we have a great resources
+            Ei doctus persius his, usu mundi causae complectitur ne, an vim
+            solet dicam delicatissimi. Agam facete denique qui eu. Mel ea cetero
+            sensibus tincidunt, amet velit legendos cum in. Sensibus conceptam
+            reprehendunt mea no, ferri sapientem interesset eu nec.
           </Desc>
           <CardContainer>
             {cardData.map((data) => (

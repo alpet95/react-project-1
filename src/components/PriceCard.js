@@ -81,10 +81,10 @@ const Button = styled.button`
 
 const PriceCard = (props) => {
   const listItemData = [
-    "200 Hand-Crafted Templates",
-    "Exclusive Support",
-    "50+ PreBuilt Websites",
-    "Premium Plugins",
+    "Latine accumsan per ei",
+    "Tantas dicunt nostrum mei no",
+    "Tritani veritus mel ea",
+    "Velit bonorum te per",
   ];
   return (
     <Container>

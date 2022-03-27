@@ -48,7 +48,7 @@ const AddressItem = () => {
       id: Math.random().toString(),
       icon: MapIcon,
       text: {
-        text_1: "123 Park Avenue St., New York, USA",
+        text_1: "55 Queens Drive, London, UK",
       },
     },
     {
@@ -63,8 +63,8 @@ const AddressItem = () => {
       id: Math.random().toString(),
       icon: SendIcon,
       text: {
-        text_1: "contact@lama.dev",
-        text_2: "sales@lama.dev",
+        text_1: "lorem@gmail.com",
+        text_2: "ipsum@gmail.com",
       },
     },
   ];

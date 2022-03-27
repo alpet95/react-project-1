@@ -1,12 +1,11 @@
 import React from "react";
 import AddressItem from "./AddressItem";
-import PatternImage from "../img/pattern.png";
 import styled from "styled-components";
 
 // ========== css: styled components ==========
 const Container = styled.div`
   height: 90%;
-  background: url(${PatternImage});
+  background-color: lightcyan;
 `;
 
 const Wrapper = styled.div`
