@@ -1,6 +1,6 @@
 import React from "react";
 // __________ assets __________
-import People from "../img/people.png";
+import TeamImage from "../img/team.png";
 // __________ styles __________
 import styled from "styled-components";
 
@@ -31,39 +31,36 @@ const Left = styled.div`
 
 const Title = styled.h1`
   width: 60%;
-  font-size: 60px;
+  font-size: 50px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    max-width: 420px;
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
   }
 
   @media screen and (max-width: 480px) {
-    max-width: 280px;
+    font-size: 40px;
   }
 
   @media screen and (max-width: 320px) {
-    min-width: 320px;
-    font-size: 40px;
+    min-width: 280px;
   }
 `;
 
 const Desc = styled.p`
   width: 60%;
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 18px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    max-width: 447px;
+    max-width: 450px;
     text-align: center;
   }
 
   @media screen and (max-width: 480px) {
-    max-width: 280px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   @media screen and (max-width: 320px) {
@@ -94,7 +91,7 @@ const Info = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 20px;
+  padding: 15px 24px;
   border: none;
   border-radius: 10px;
   font-weight: bold;
@@ -109,23 +106,22 @@ const Button = styled.button`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 10px;
     margin-bottom: 0;
+    padding: 14px 20px;
   }
 
   @media screen and (max-width: 480px) {
+    padding: 12px 15px;
     margin-bottom: 20px;
-    font-size: 11px;
+    font-size: 12px;
   }
 `;
 
 const Contact = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media screen and (max-width: 320px) {
-    min-width: 192px;
-  }
+  justify-content: center;
+  align-items: center;
 `;
 
 const Phone = styled.span`
@@ -170,23 +166,22 @@ const Intro = () => {
     <Container>
       {/* ========== left side ========== */}
       <Left>
-        <Title>Cras At Mi Arcu</Title>
+        <Title>Start Your Bright Career</Title>
         <Desc>
-          Curabitur auctor dolor sed felis pulvinar, ac suscipit leo fringilla.
-          Proin sit amet odio suscipit, dictum sem et, dignissim purus. Quisque
-          sit amet vulputate nibh.
+          A wonderful serenity has taken possession of my entire soul, like
+          these sweet mornings of spring which I enjoy with my whole heart.
         </Desc>
         <Info>
           <Button>JOIN US</Button>
           <Contact>
-            <Phone>Pharetra (045) 335 - 4861</Phone>
-            <ContactText>Aenean quis metus et metus</ContactText>
+            <Phone>(045) 335 - 4861</Phone>
+            <ContactText>Get In Touch With Us</ContactText>
           </Contact>
         </Info>
       </Left>
       {/* ========== right side ========== */}
       <Right>
-        <Image src={People} />
+        <Image src={TeamImage} />
       </Right>
     </Container>
   );
