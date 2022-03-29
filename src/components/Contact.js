@@ -123,7 +123,7 @@ const Button = styled.button`
   border-radius: 10px;
   font-size: 20px;
   color: white;
-  background-color: darkblue;
+  background-color: #2274a5;
   cursor: pointer;
 
   @media screen and (max-width: 1024px) {

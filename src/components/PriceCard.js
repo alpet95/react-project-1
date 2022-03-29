@@ -69,7 +69,7 @@ const Button = styled.button`
   border-radius: 10px;
   font-size: 16px;
   font-weight: bold;
-  background-color: darkblue;
+  background-color: #2274a5;
   color: white;
   cursor: pointer;
 

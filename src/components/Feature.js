@@ -28,17 +28,13 @@ const Left = styled.div`
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    width: 30%;
-  }
-
-  @media screen and (max-width: 480px) {
     display: none;
   }
 `;
 
 const Image = styled.img`
   width: 80%;
-  max-width: 450px;
+  max-width: 400px;
 `;
 
 // __________ right side __________
@@ -59,11 +55,7 @@ const Right = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: 70px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 50px;
-  }
+  font-size: 50px;
 
   @media screen and (max-width: 480px) {
     font-size: 40px;
@@ -76,17 +68,17 @@ const Title = styled.span`
 
 const SubTitle = styled.span`
   margin-top: 30px;
-  font-size: 24px;
+  font-size: 18px;
   font-style: italic;
   color: #333;
 
   @media screen and (max-width: 768px) {
-    font-size: 22px;
+    max-width: 420px;
     margin-top: 20px;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 20px;
+    font-size: 16px;
     max-width: 300px;
   }
 
@@ -97,38 +89,41 @@ const SubTitle = styled.span`
 
 const Desc = styled.p`
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 16px;
   color: #777;
 
   @media screen and (max-width: 768px) {
+    max-width: 415px;
     margin-top: 20px;
-    font-size: 18px;
-    max-width: 458px;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 16px;
-    max-width: 435px;
+    font-size: 14px;
+    max-width: 375px;
   }
 
   @media screen and (max-width: 320px) {
-    min-width: 300px;
+    min-width: 290px;
   }
 `;
 
 const Button = styled.button`
   width: 150px;
   margin-top: 20px;
-  padding: 15px 20px;
+  padding: 10px 14px;
   border: none;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   background-color: #2274a5;
   cursor: pointer;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 480px) {
     font-size: 16px;
   }
 `;
@@ -141,22 +136,25 @@ const Feature = () => {
       </Left>
       <Right>
         <Title>
-          <b>sed</b> rhoncus
+          <b>good</b> service
           <br />
-          <b>gravida</b> lacus
+          <b>good</b> business
         </Title>
         <SubTitle>
-          Curabitur malesuada
-          <br /> lacus in est ultricies, in egestas quam convallis.
+          The languages only
+          <br />
+          differ in their grammar, their pronunciation and their most common
+          words.
         </SubTitle>
         <Desc>
-          Sed eget eros id diam vehicula pellentesque sed a metus. Cras sed nisi
-          convallis, pharetra odio at, commodo nulla. Vivamus hendrerit sed
-          tortor vel venenatis. Phasellus vitae mauris rhoncus, suscipit sapien
-          ut, dignissim nisi.
+          Everyone realizes why a new common language would be desirable: one
+          could refuse to pay expensive translators. To achieve this, it would
+          be necessary to have uniform grammar, pronunciation and more common
+          words.
         </Desc>
         <Desc>
-          Maecenas elementum elementum nisi, a finibus nibh posuere quis.
+          If several languages coalesce, the grammar of the resulting language
+          is more simple and regular than that of the individual languages.
         </Desc>
         <Button>Learn More</Button>
       </Right>

@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 // __________ left side __________
@@ -37,9 +38,9 @@ const Menu = styled.ul`
 
 const MenuItem = styled.li`
   margin-right: 30px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  color: gray;
+  color: #555;
 
   @media screen and (max-width: 768px) {
     font-size: 16px;
@@ -65,13 +66,13 @@ const Navbar = () => {
       <Wrapper>
         {/* ========== left side ========== */}
         <Left>
-          <Logo>Morbi</Logo>
+          <Logo>codepro.</Logo>
           <Menu>
-            <MenuItem>Suscipit </MenuItem>
-            <MenuItem>Fringilla</MenuItem>
-            <MenuItem>Proin</MenuItem>
-            <MenuItem>Amet</MenuItem>
-            <MenuItem>Odio</MenuItem>
+            <MenuItem>Home</MenuItem>
+            <MenuItem>About</MenuItem>
+            <MenuItem>Service</MenuItem>
+            <MenuItem>Price</MenuItem>
+            <MenuItem>Contact</MenuItem>
           </Menu>
         </Left>
 

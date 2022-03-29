@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // __________ components __________
-import VideoModal from "./VideoModal";
+import Modal from "./Modal";
 import MiniCard from "./MiniCard";
 // __________ images __________
 import ServiceImage from "../img/service.png";
@@ -139,17 +139,6 @@ const Icon = styled.img`
   width: 20px;
 `;
 
-// __________ modal: video __________
-const Video = styled.video`
-  height: 350px;
-  margin: 0 auto;
-  display: ${(props) => !props.open && "none"};
-  @media screen and (max-width: 480px) {
-    width: 100%;
-    height: 100%;
-  }
-`;
-
 // ========== component: service ==========
 const Service = () => {
   const cardData = [
@@ -171,38 +160,35 @@ const Service = () => {
   ];
 
   // __________ hooks __________
-  const [openVideoModal, setOpenVideoModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   // __________ handlers __________
   const openVideoHandler = () => {
-    setOpenVideoModal(true);
+    setOpenModal(true);
     document.body.style.overflow = "hidden";
   };
 
   const closeVideoHandler = () => {
-    setOpenVideoModal(false);
+    setOpenModal(false);
     document.body.style.overflow = "visible";
   };
 
   let modalContent;
-  if (openVideoModal) {
+  if (openModal) {
     modalContent = (
-      <VideoModal onClose={closeVideoHandler}>
-        <Video
-          open
-          autoPlay
-          loop
-          controls
-          src="https://player.vimeo.com/external/449759244.sd.mp4?s=d5f3da46ddc17aa69a7de84f1e420610ebd2a391&profile_id=139&oauth2_token_id=57447761"
-        />
-      </VideoModal>
+      <Modal onClose={closeVideoHandler}>
+        <p>
+          Thanks for being interested in our website. This page is developed
+          only for demo purpose. Click outside this window to exit.
+        </p>
+      </Modal>
     );
   }
   return (
     <Container>
       {modalContent}
       <Left>
-        <Image hide={openVideoModal} src={ServiceImage} />
+        <Image hide={openModal} src={ServiceImage} />
       </Left>
       <Right>
         <Wrapper>
