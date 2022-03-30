@@ -66,7 +66,7 @@ const Navbar = () => {
       <Wrapper>
         {/* ========== left side ========== */}
         <Left>
-          <Logo>codepro</Logo>
+          <Logo>codepro.</Logo>
           <Menu>
             <MenuItem>Home</MenuItem>
             <MenuItem>About</MenuItem>

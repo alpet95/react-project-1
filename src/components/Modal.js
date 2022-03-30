@@ -42,7 +42,7 @@ const ModalOverlay = (props) => {
 const portalElement = document.getElementById("overlay");
 
 // ========== component: video modal ==========
-const VideoModal = (props) => {
+const Modal = (props) => {
   return (
     <Fragment>
       {ReactDOM.createPortal(
@@ -57,4 +57,4 @@ const VideoModal = (props) => {
   );
 };
 
-export default VideoModal;
+export default Modal;
