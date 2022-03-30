@@ -53,7 +53,7 @@ const PriceShape = styled.div`
 
 // ========== component: app ==========
 function App() {
-  const mobileScreen = window.screen.width <= 480 ? true : false;
+  const smallScreen = window.screen.width <= 768 ? true : false;
 
   return (
     <Fragment>
@@ -68,7 +68,7 @@ function App() {
       </Container>
       <Container>
         <Service />
-        {!mobileScreen && <ServiceShape />}
+        {!smallScreen && <ServiceShape />}
       </Container>
       <Container>
         <Price />

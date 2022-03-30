@@ -90,6 +90,7 @@ const SubTitle = styled.span`
 const Desc = styled.p`
   margin-top: 30px;
   font-size: 16px;
+  line-height: 1.4;
   color: #777;
 
   @media screen and (max-width: 768px) {

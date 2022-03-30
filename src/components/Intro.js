@@ -70,7 +70,7 @@ const Desc = styled.p`
 
 const Info = styled.div`
   width: 60%;
-  margin-top: 50px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,6 +131,7 @@ const Phone = styled.span`
 
 const ContactText = styled.span`
   margin-top: 5px;
+  font-size: 14px;
   color: #555;
 `;
 

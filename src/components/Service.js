@@ -21,8 +21,10 @@ const Container = styled.div`
 
 // __________ left side __________
 const Left = styled.div`
-  position: relative;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -30,37 +32,13 @@ const Left = styled.div`
 `;
 
 const Image = styled.img`
-  position: absolute;
-  left: 5rem;
-  bottom: 0;
-  height: 80%;
-  display: ${(props) => props.hide && "none"};
-
-  @media screen and (max-width: 1750px) {
-    left: -5rem;
-  }
-
-  @media screen and (max-width: 1550px) {
-    left: -10rem;
-  }
-
-  @media screen and (max-width: 1350px) {
-    left: -18rem;
-  }
-
-  @media screen and (max-width: 1200px) {
-    left: -18rem;
-  }
-
-  @media screen and (max-width: 1024px) {
-    left: -20rem;
-    height: 70%;
-  }
+  width: 100%;
+  max-width: 450px;
 `;
 
 // __________ right side __________
 const Right = styled.div`
-  width: 50%;
+  width: 60%;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -70,7 +48,7 @@ const Right = styled.div`
 
 const Wrapper = styled.div`
   height: 100%;
-  padding: 50px;
+  padding: 0 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,6 +59,12 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
+  font-size: 50px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 40px;
+  }
+
   @media screen and (max-width: 320px) {
     min-width: 280px;
   }
@@ -88,12 +72,8 @@ const Title = styled.h1`
 
 const Desc = styled.p`
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 16px;
   color: #555;
-
-  @media screen and (max-width: 480px) {
-    font-size: 16px;
-  }
 
   @media screen and (max-width: 320px) {
     min-width: 280px;
@@ -101,13 +81,19 @@ const Desc = styled.p`
 `;
 
 const CardContainer = styled.div`
+  max-width: 570px;
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: baseline;
 
+  @media screen and (max-width: 768px) {
+    max-width: 550px;
+  }
+
   @media screen and (max-width: 480px) {
-    margin-top: 20px;
+    max-width: none;
+    margin-top: 30px;
     flex-direction: column;
     align-items: center;
   }
@@ -115,22 +101,25 @@ const CardContainer = styled.div`
 
 const Button = styled.button`
   width: 180px;
-  padding: 15px;
-  margin: 50px auto 0;
+  padding: 10px 14px;
+  margin: 30px auto 0;
   display: flex;
   align-items: center;
   border: none;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 20px;
+  font-size: 18px;
   color: white;
   background-color: #2274a5;
   cursor: pointer;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     width: 150px;
-    margin-top: 20px;
     padding: 8px 12px;
     font-size: 16px;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-top: 20px;
   }
 `;
 
@@ -145,17 +134,17 @@ const Service = () => {
     {
       id: Math.random().toString(),
       icon: SearchIcon,
-      text: "Sit ne tota probo. In has quidam aperiri. Tota detraxit cu est.",
+      text: "It will be as simple as Occidental",
     },
     {
       id: Math.random().toString(),
       icon: SearchIcon,
-      text: "Sit ne tota probo. In has quidam aperiri. Tota detraxit cu est. ",
+      text: "It will be as simple as Occidental",
     },
     {
       id: Math.random().toString(),
       icon: SearchIcon,
-      text: "Sit ne tota probo. In has quidam aperiri. Tota detraxit cu est. ",
+      text: "It will be as simple as Occidental",
     },
   ];
 
@@ -188,16 +177,16 @@ const Service = () => {
     <Container>
       {modalContent}
       <Left>
-        <Image hide={openModal} src={ServiceImage} />
+        <Image src={ServiceImage} />
       </Left>
       <Right>
         <Wrapper>
-          <Title>Id quot oblique sed, ludus</Title>
+          <Title>Check what we can offer</Title>
           <Desc>
-            Ei doctus persius his, usu mundi causae complectitur ne, an vim
-            solet dicam delicatissimi. Agam facete denique qui eu. Mel ea cetero
-            sensibus tincidunt, amet velit legendos cum in. Sensibus conceptam
-            reprehendunt mea no, ferri sapientem interesset eu nec.
+            To achieve this, it would be necessary to have uniform grammar,
+            pronunciation and more common words. If several languages coalesce,
+            the grammar of the resulting language is more simple and regular
+            than that of the individual languages.
           </Desc>
           <CardContainer>
             {cardData.map((data) => (
