@@ -129,9 +129,13 @@ const Button = styled.button`
   }
 `;
 
-const Feature = () => {
+const Feature = (props) => {
+  const getOpenModalHandler = () => {
+    props.onGetOpenHandler();
+  };
   return (
     <Container>
+      {props.onGetModalContent}
       <Left>
         <Image src={PhoneApp} />
       </Left>
@@ -157,7 +161,7 @@ const Feature = () => {
           If several languages coalesce, the grammar of the resulting language
           is more simple and regular than that of the individual languages.
         </Desc>
-        <Button>Learn More</Button>
+        <Button onClick={getOpenModalHandler}>Learn More</Button>
       </Right>
     </Container>
   );

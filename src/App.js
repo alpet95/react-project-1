@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 // __________ components __________
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
@@ -7,6 +7,7 @@ import Service from "./components/Service";
 import Price from "./components/Price";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 // __________ styles __________
 import styled, { css } from "styled-components";
 
@@ -53,7 +54,33 @@ const PriceShape = styled.div`
 
 // ========== component: app ==========
 function App() {
+  // __________ hooks __________
+  const [openModal, setOpenModal] = useState(false);
+
+  // __________ handlers __________
+  const openVideoHandler = () => {
+    setOpenModal(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeVideoHandler = () => {
+    setOpenModal(false);
+    document.body.style.overflow = "visible";
+  };
+
   const smallScreen = window.screen.width <= 768 ? true : false;
+
+  let modalContent;
+  if (openModal) {
+    modalContent = (
+      <Modal onClose={closeVideoHandler}>
+        <p>
+          Thanks for being interested in our website. This page is developed
+          only for demo purpose. Click outside this window to exit.
+        </p>
+      </Modal>
+    );
+  }
 
   return (
     <Fragment>
@@ -63,11 +90,17 @@ function App() {
         <IntroShape />
       </Container>
       <Container>
-        <Feature />
+        <Feature
+          onGetOpenHandler={openVideoHandler}
+          onGetModalContent={modalContent}
+        />
         <FeatureShape />
       </Container>
       <Container>
-        <Service />
+        <Service
+          onGetOpenHandler={openVideoHandler}
+          onGetModalContent={modalContent}
+        />
         {!smallScreen && <ServiceShape />}
       </Container>
       <Container>
