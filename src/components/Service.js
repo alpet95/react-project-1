@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // __________ components __________
+import Modal from "./Modal";
 import MiniCard from "./MiniCard";
 // __________ images __________
 import ServiceImage from "../img/service.png";
@@ -128,7 +129,7 @@ const Icon = styled.img`
 `;
 
 // ========== component: service ==========
-const Service = (props) => {
+const Service = () => {
   const cardData = [
     {
       id: Math.random().toString(),
@@ -147,13 +148,34 @@ const Service = (props) => {
     },
   ];
 
-  const getOpenHandler = () => {
-    props.onGetOpenHandler();
+  // __________ hooks __________
+  const [openModal, setOpenModal] = useState(false);
+
+  // __________ handlers __________
+  const openVideoHandler = () => {
+    setOpenModal(true);
+    document.body.style.overflow = "hidden";
   };
 
+  const closeVideoHandler = () => {
+    setOpenModal(false);
+    document.body.style.overflow = "visible";
+  };
+
+  let modalContent;
+  if (openModal) {
+    modalContent = (
+      <Modal onClose={closeVideoHandler}>
+        <p>
+          Thanks for being interested in our website. This page is developed
+          only for demo purpose. Click outside this window to exit.
+        </p>
+      </Modal>
+    );
+  }
   return (
     <Container>
-      {props.onGetModalContent}
+      {modalContent}
       <Left>
         <Image src={ServiceImage} />
       </Left>
@@ -171,7 +193,7 @@ const Service = (props) => {
               <MiniCard key={data.id} icon={data.icon} text={data.text} />
             ))}
           </CardContainer>
-          <Button onClick={getOpenHandler}>
+          <Button onClick={openVideoHandler}>
             <Icon src={PlayIcon}></Icon>
             How it works
           </Button>
