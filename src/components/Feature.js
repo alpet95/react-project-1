@@ -1,7 +1,7 @@
 import React from "react";
-// __________ assets __________
+// ========== assets ==========
 import PhoneApp from "../img/phone-app.png";
-// __________ styles __________
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -20,7 +20,7 @@ const Container = styled.div`
   }
 `;
 
-// __________ left side __________
+// ========== left side ==========
 const Left = styled.div`
   width: 50%;
   display: flex;
@@ -37,7 +37,7 @@ const Image = styled.img`
   max-width: 400px;
 `;
 
-// __________ right side __________
+// ========== right side ==========
 const Right = styled.div`
   width: 50%;
   display: flex;
@@ -129,12 +129,15 @@ const Button = styled.button`
   }
 `;
 
+// ========== component: feature ==========
 const Feature = () => {
   return (
     <Container>
+      {/* ========== left side ========== */}
       <Left>
         <Image src={PhoneApp} />
       </Left>
+      {/* ========== right side ========== */}
       <Right>
         <Title>
           <b>good</b> service

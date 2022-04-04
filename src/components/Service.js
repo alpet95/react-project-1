@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-// __________ components __________
+// ========== components ==========
 import Modal from "./Modal";
 import MiniCard from "./MiniCard";
-// __________ images __________
+// ========== assets ==========
 import ServiceImage from "../img/service.png";
 import SearchIcon from "../img/search.png";
 import PlayIcon from "../img/play.png";
-// __________ styles __________
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -19,7 +19,7 @@ const Container = styled.div`
   }
 `;
 
-// __________ left side __________
+// ========== left side ==========
 const Left = styled.div`
   display: flex;
   justify-content: center;
@@ -36,7 +36,7 @@ const Image = styled.img`
   max-width: 450px;
 `;
 
-// __________ right side __________
+// ========== right side ==========
 const Right = styled.div`
   width: 60%;
 
@@ -81,18 +81,12 @@ const Desc = styled.p`
 `;
 
 const CardContainer = styled.div`
-  max-width: 570px;
-  margin-top: 50px;
+  margin: 50px auto 0;
   display: flex;
   justify-content: space-around;
   align-items: baseline;
 
-  @media screen and (max-width: 768px) {
-    max-width: 550px;
-  }
-
   @media screen and (max-width: 480px) {
-    max-width: none;
     margin-top: 30px;
     flex-direction: column;
     align-items: center;
@@ -100,7 +94,7 @@ const CardContainer = styled.div`
 `;
 
 const Button = styled.button`
-  width: 180px;
+  width: 160px;
   padding: 10px 14px;
   margin: 30px auto 0;
   display: flex;
@@ -130,6 +124,7 @@ const Icon = styled.img`
 
 // ========== component: service ==========
 const Service = () => {
+  // ========== variables ==========
   const cardData = [
     {
       id: Math.random().toString(),
@@ -148,10 +143,10 @@ const Service = () => {
     },
   ];
 
-  // __________ hooks __________
+  // ========== hooks ==========
   const [openModal, setOpenModal] = useState(false);
 
-  // __________ handlers __________
+  // ========== handlers ==========
   const openVideoHandler = () => {
     setOpenModal(true);
     document.body.style.overflow = "hidden";
@@ -162,6 +157,7 @@ const Service = () => {
     document.body.style.overflow = "visible";
   };
 
+  // ========== conditional content ==========
   let modalContent;
   if (openModal) {
     modalContent = (
@@ -176,9 +172,11 @@ const Service = () => {
   return (
     <Container>
       {modalContent}
+      {/* ========== left side ========== */}
       <Left>
         <Image src={ServiceImage} />
       </Left>
+      {/* ========== right side ========== */}
       <Right>
         <Wrapper>
           <Title>Check what we can offer</Title>

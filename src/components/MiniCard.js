@@ -1,9 +1,11 @@
 import React from "react";
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
 const Container = styled.div`
   width: 120px;
+  margin-right: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -11,8 +13,16 @@ const Container = styled.div`
   -webkit-box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.58);
   box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.58);
 
+  @media screen and (max-width: 1024px) {
+    width: 80px;
+    margin-right: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100px;
+  }
+
   @media screen and (max-width: 480px) {
-    width: 100%;
     max-width: 320px;
     padding: 5px;
     margin-bottom: 1rem;
@@ -20,7 +30,6 @@ const Container = styled.div`
 
   @media screen and (max-width: 480px) {
     width: 100%;
-    min-width: 280px;
     padding: 5px;
     margin-bottom: 1rem;
   }
@@ -39,6 +48,7 @@ const Text = styled.span`
   }
 `;
 
+// ========== component: mini card ==========
 const MiniCard = (props) => {
   return (
     <Container>

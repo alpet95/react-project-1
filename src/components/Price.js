@@ -1,7 +1,7 @@
 import React from "react";
-// __________ components __________
+// ========== components ==========
 import PriceCard from "./PriceCard";
-// __________ styles __________
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -16,7 +16,9 @@ const Container = styled.div`
   }
 `;
 
+// ========== component: price ==========
 const Price = () => {
+  // ========== variables ==========
   const priceCardData = [
     {
       id: Math.random().toString(),

@@ -1,5 +1,7 @@
 import React from "react";
+// ========== components ==========
 import AddressItem from "./AddressItem";
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -12,8 +14,8 @@ const Wrapper = styled.div`
   height: 100%;
   padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -22,6 +24,7 @@ const Wrapper = styled.div`
 
 const FormContainer = styled.div`
   width: 50%;
+  margin-top: 1rem;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -29,16 +32,11 @@ const FormContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  margin-top: 0;
-  margin: 50px;
+  margin-bottom: 40px;
   text-align: center;
 
   @media screen and (max-width: 1024px) {
-    margin: 20px;
-  }
-
-  @media screen and (max-width: 768px) {
-    margin: 20px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -139,6 +137,7 @@ const Button = styled.button`
 
 const AddressContainer = styled.div`
   width: 50%;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,7 +149,7 @@ const AddressContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    margin-top: 20px;
+    margin-left: 0;
   }
 `;
 

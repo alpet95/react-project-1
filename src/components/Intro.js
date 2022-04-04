@@ -1,7 +1,7 @@
 import React from "react";
-// __________ assets __________
+// ========== assets ==========
 import TeamImage from "../img/team.png";
-// __________ styles __________
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -15,7 +15,7 @@ const Container = styled.div`
   }
 `;
 
-// __________ left side __________
+// ========== left side ==========
 const Left = styled.div`
   width: 60%;
   display: flex;
@@ -135,7 +135,7 @@ const ContactText = styled.span`
   color: #555;
 `;
 
-// __________ right side __________
+// ========== right side ==========
 const Right = styled.div`
   width: 40%;
   display: flex;
@@ -161,7 +161,7 @@ const Image = styled.img`
   }
 `;
 
-// ========== component ==========
+// ========== component: intro ==========
 const Intro = () => {
   return (
     <Container>

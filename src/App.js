@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-// __________ components __________
+// ========== components ==========
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Feature from "./components/Feature";
@@ -7,7 +7,7 @@ import Service from "./components/Service";
 import Price from "./components/Price";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-// __________ styles __________
+// ========== styles ==========
 import styled, { css } from "styled-components";
 
 // ========== css: styled components ==========
@@ -17,7 +17,7 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-// __________ css clip __________
+// ========== css: shape ==========
 const Shape = css`
   position: absolute;
   top: 0;

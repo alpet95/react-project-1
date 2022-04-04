@@ -1,4 +1,5 @@
 import React from "react";
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -13,10 +14,23 @@ const Container = styled.div`
   box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.58);
   background-color: white;
 
+  :last-child {
+    margin-right: 0px;
+  }
+
   @media screen and (max-width: 768px) {
+    width: 360px;
     margin-right: 0;
     margin-bottom: 10px;
     padding: 10px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 270px;
+  }
+
+  @media screen and (max-width: 320px) {
+    min-width: 170px;
   }
 `;
 
@@ -57,6 +71,11 @@ const List = styled.ul`
 const ListItem = styled.li`
   margin: 30px 0;
 
+  @media screen and (max-width: 1024px) {
+    margin: 20px 0;
+    font-size: 12px;
+  }
+
   @media screen and (max-width: 768px) {
     margin: 10px;
     font-size: 12px;
@@ -79,6 +98,7 @@ const Button = styled.button`
   }
 `;
 
+// ========== component: price card ==========
 const PriceCard = (props) => {
   const listItemData = [
     "Latine accumsan per ei",

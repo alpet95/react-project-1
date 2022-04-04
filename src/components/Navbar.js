@@ -1,5 +1,5 @@
 import React from "react";
-// __________ styles __________
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-// __________ left side __________
+// ========== left side ==========
 const Left = styled.div`
   width: 60%;
   display: flex;
@@ -48,18 +48,18 @@ const MenuItem = styled.li`
   }
 `;
 
-// __________ right side __________
+// ========== right side ==========
 const Button = styled.button`
   padding: 10px 15px;
   border: 2px solid white;
   border-radius: 10px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   background-color: crimson;
   cursor: pointer;
 `;
 
-// ========== component ==========
+// ========== component: navbar ==========
 const Navbar = () => {
   return (
     <Container>

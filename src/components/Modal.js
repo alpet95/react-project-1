@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
+// ========== styles ==========
 import styled from "styled-components";
 
 // ========== css: styled components ==========
